@@ -5,28 +5,23 @@ packages = ["checkmate"]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
-[project]
-name = "checkmate5"
+[tool.poetry]
+name = "checkmate"
 version = "4.0.94"
-authors = [
-    { name = "Andreas Dewes" }
-]
+authors = ["Andreas Dewes"]
 description = "A meta-code checker written in Python."
 readme = "README.md"
-license = { text = "AGPL-3.0" }
-
-
+license = "AGPL-3.0"
 classifiers = [
   "Intended Audience :: Developers",
   "Programming Language :: Python",
   "Topic :: Software Development :: Quality Assurance"
 ]
-dependencies = [
-  "blitzdb5",
-  "pyyaml",
-  "sqlalchemy"
-]
+[tool.poetry.dependencies]
+pyyaml = {file = "PyYAML-5.4.1-cp39-cp39-manylinux1_x86_64.whl"}
+blitzdb5 = "^4.0.17"
+python = "^3.10"
+sqlalchemy = "^2.0.36"
 
-
-[project.scripts]
+[tool.poetry.scripts]
 checkmate = "checkmate.scripts.manage:main"
