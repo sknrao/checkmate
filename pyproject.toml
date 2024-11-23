@@ -20,7 +20,7 @@ classifiers = [
 [tool.poetry.dependencies]
 pyyaml = {file = "PyYAML-5.4.1-cp39-cp39-manylinux1_x86_64.whl"}
 blitzdb5 = "^4.0.17"
-python = "^3.10"
+python = "^3.8"
 sqlalchemy = "^2.0.36"
 
 [tool.poetry.scripts]
